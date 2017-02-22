@@ -1,0 +1,28 @@
+LIB_SYD_THREAD_VER := 1.0.0
+DLIB_FLAGS = -fPIC -shared
+TAG := libsyd_thread.so
+ELF := $(TAG).$(LIB_SYD_THREAD_VER)
+SRC := $(shell find -name '*.c')
+OBJ := $(SRC:%.c=%.o)
+
+CFLAGS += -I$(SUNNADA_DIR)/common/include/common
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c -fPIC $(BUILD_CFLAGS) $<
+
+.PHONY: build  clean
+all: clean build install
+
+build: $(OBJ)
+	$(CC) $(CFLAGS) $(BUILD_CFLAGS) $(DLIB_FLAGS) $^ -o $(ELF)
+
+install:
+	cp $(ELF) $(TAG)
+	cp $(TAG) $(SUNNADA_LIB)/
+	mkdir -p $(BUILD_DIR)/heads/
+	mkdir -p $(BUILD_DIR)/heads/libs/syd_thread/
+	cp -p -rf *.h ${BUILD_DIR}/heads/libs/syd_thread/
+	cp $(TAG) $(TMP_ROOTFS_DIR)/usr/lib64
+	
+clean:
+	rm -rf  $(OBJ) $(ELF)

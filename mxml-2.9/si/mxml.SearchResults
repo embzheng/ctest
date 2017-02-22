@@ -1,0 +1,14 @@
+---- mxml_save_cb_t Matches (13 in 2 files) ----
+Mxml-file.c (z:\develop\cxx_test\mxml-2.9):			                mxml_save_cb_t cb, int col,
+Mxml-file.c (z:\develop\cxx_test\mxml-2.9):			              mxml_save_cb_t cb, int ws,
+Mxml-file.c (z:\develop\cxx_test\mxml-2.9):    mxml_save_cb_t cb)			/* I - Whitespace callback or MXML_NO_CALLBACK */
+Mxml-file.c (z:\develop\cxx_test\mxml-2.9):	   mxml_save_cb_t cb)		/* I - Whitespace callback or MXML_NO_CALLBACK */
+Mxml-file.c (z:\develop\cxx_test\mxml-2.9):	     mxml_save_cb_t cb)		/* I - Whitespace callback or MXML_NO_CALLBACK */
+Mxml-file.c (z:\develop\cxx_test\mxml-2.9):               mxml_save_cb_t cb)	/* I - Whitespace callback or MXML_NO_CALLBACK */
+Mxml-file.c (z:\develop\cxx_test\mxml-2.9):	        mxml_save_cb_t  cb,	/* I - Whitespace callback */
+Mxml-file.c (z:\develop\cxx_test\mxml-2.9):              mxml_save_cb_t  cb,	/* I - Callback function */
+Mxml.h (z:\develop\cxx_test\mxml-2.9):typedef const char *(*mxml_save_cb_t)(mxml_node_t *, int);
+Mxml.h (z:\develop\cxx_test\mxml-2.9):			        	     mxml_save_cb_t cb);
+Mxml.h (z:\develop\cxx_test\mxml-2.9):			           mxml_save_cb_t cb);
+Mxml.h (z:\develop\cxx_test\mxml-2.9):			             mxml_save_cb_t cb);
+Mxml.h (z:\develop\cxx_test\mxml-2.9):			               int bufsize, mxml_save_cb_t cb);
